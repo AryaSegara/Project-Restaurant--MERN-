@@ -21,7 +21,11 @@ export default function Banner() {
           <img src="./images/bannerHome.png" alt="" />
           <div>
             <div>
-              <img src="./images/banner-1.png" alt="" />
+              <img src="./images/banner-1.png" alt="" className="rounded-2xl" />
+              <div>
+                <h5>Spicy noodles</h5>
+                
+              </div>
             </div>
           </div>
         </div>
