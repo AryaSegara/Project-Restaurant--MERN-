@@ -1,6 +1,21 @@
+import { useEffect } from "react";
+import { useState } from "react";
 import { BiPhoneCall } from "react-icons/bi";
 
 const Navbar = () => {
+  const [isSticky, setSeticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 0) {
+        setSeticky(true);
+      } else {
+        setSeticky(false);
+      }
+    };
+  }, []);
+
   const navItems = (
     <>
       <li>
@@ -73,7 +88,9 @@ const Navbar = () => {
           </div>
           <a href="/">
             <img src="" alt="" />
-            <span className="text-xl text-bold text-green uppercase">Ratatouille</span>
+            <span className="text-xl text-bold text-green uppercase">
+              Ratatouille
+            </span>
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
