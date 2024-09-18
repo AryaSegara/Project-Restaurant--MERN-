@@ -4,6 +4,10 @@ body{
   font-family: "Inter", sans-serif;
 }
 
+header{
+  z-index: 100001 !important;
+}
+
 /* .section-container{
   @apply max-w-screen-2xl container mx-auto lx:px-24 px-4
 } */
