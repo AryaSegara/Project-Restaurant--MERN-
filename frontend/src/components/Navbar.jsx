@@ -14,6 +14,10 @@ const Navbar = () => {
         setSeticky(false);
       }
     };
+
+    return() => {
+      window.addEventListener("scroll" , handleScroll);
+    }
   }, []);
 
   const navItems = (
@@ -59,8 +63,14 @@ const Navbar = () => {
     </>
   );
   return (
-    <header className="max-w-screen-2xl container mx-auto">
-      <div className="navbar xl:px-20 ">
+    <header className="max-w-screen-2xl container mx-auto fixed top-0 right-0 left-0 transition-all duration-300 ease-in-out">
+      <div
+        className={`navbar xl:px-20  ${
+          isSticky
+            ? "shadow-md bg-base-100 transition-all duration-300 ease-in-out"
+            : ""
+        }`}
+      >
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
