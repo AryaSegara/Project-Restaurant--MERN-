@@ -7,7 +7,9 @@ export default function Categories() {
       </div>
 
 
-      {/* Cart */}
+      {/* Category Card */}
+      <div></div>
+
     </div>
   );
 }
