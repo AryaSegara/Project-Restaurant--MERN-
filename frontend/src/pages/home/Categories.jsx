@@ -5,6 +5,9 @@ export default function Categories() {
         <p className="subtitle">Customer Favorites</p>
         <h2 className="title">Popular Categories</h2>
       </div>
+
+
+      {/* Cart */}
     </div>
   );
 }
