@@ -8,6 +8,14 @@ header{
   z-index: 10001 !important;
 }
 
+.subtitle{
+  @apply text-red uppercase tracking-wide font-medium text-lg
+}
+
 /* .section-container{
   @apply max-w-screen-2xl container mx-auto lx:px-24 px-4
 } */
+
+.title{
+  @apply text-3xl md:text-4xl font-bold my-2 md:leading-snug leading-snug
+}

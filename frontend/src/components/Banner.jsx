@@ -81,10 +81,10 @@ export default function Banner() {
 
         {/* Text */}
         <div className="md:w-1/2 space-y-7 px-4">
-          <h2 className="md:text-5xl text-4xl font-bold md:leading-snug leading-snug">
+          <h2 className="md:text-4xl text-3xl font-bold md:leading-snug leading-snug">
             Dive into Delights of Delectable
             <span className="text-green"> Food</span>
-            <p className="text-xl text-[#4A4A4A]">
+            <p className="text-lg text-[#4A4A4A]">
               Where Each Plate Weaves a story of Culinary Mastery and Passionate
             </p>
             <button className="btn bg-green px-8 py-3 font-semibold text-white rounded-full">
