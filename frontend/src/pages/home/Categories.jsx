@@ -35,7 +35,19 @@ export default function Categories() {
       </div>
 
       {/* Category Card */}
-      <div></div>
+      <div>
+        {
+          categoryItems.map((item) => (
+              <div key={item.id}>
+                <div>
+                  <img src={item.image} alt="" />
+                </div>
+
+              </div>
+
+          ))
+        }
+      </div>
     </div>
   );
 }
