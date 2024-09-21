@@ -42,9 +42,7 @@ export default function Categories() {
                 <div>
                   <img src={item.image} alt="" />
                 </div>
-
               </div>
-
           ))
         }
       </div>
