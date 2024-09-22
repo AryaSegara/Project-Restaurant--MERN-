@@ -38,9 +38,9 @@ export default function Categories() {
         {categoryItems.map((item) => (
           <div
             key={item.id}
-            className="shadow-lg rounded-md bg-white py-6 px-5 w-72 mx-auto text-center cursor-pointer hover:translate-y-4 duration-300 transition-all"
+            className="shadow-lg rounded-lg bg-white py-6 px-5 w-52 mx-auto text-center cursor-pointer hover:translate-y-4 duration-300 transition-all"
           >
-            <div className="">
+            <div className="flex w-full mx-auto items-center justify-center ">
               <img
                 src={item.image}
                 alt=""
