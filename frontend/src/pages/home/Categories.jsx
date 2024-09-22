@@ -36,8 +36,11 @@ export default function Categories() {
       {/* Category Card */}
       <div className="flex flex-col sm:flex-row flex-wrap gap-8 justify-around items-center mt-12">
         {categoryItems.map((item) => (
-          <div key={item.id}>
-            <div>
+          <div
+            key={item.id}
+            className="shadow-lg rounded-md bg-white py-6 px-5 w-72 mx-auto text-center cursor-pointer hover:translate-y-4 duration-300 transition-all"
+          >
+            <div className="">
               <img
                 src={item.image}
                 alt=""
