@@ -23,7 +23,6 @@ const categoryItems = [
     des: "(255 Items)",
     image: "/images/home/category/img4.png",
   },
-
 ];
 
 export default function Categories() {
@@ -35,16 +34,22 @@ export default function Categories() {
       </div>
 
       {/* Category Card */}
-      <div>
-        {
-          categoryItems.map((item) => (
-              <div key={item.id}>
-                <div>
-                  <img src={item.image} alt="" />
-                </div>
-              </div>
-          ))
-        }
+      <div className="flex flex-col sm:flex-row flex-wrap gap-8 justify-around items-center mt-12">
+        {categoryItems.map((item) => (
+          <div key={item.id}>
+            <div>
+              <img
+                src={item.image}
+                alt=""
+                className="bg-[#C1F1C6] p-5 rounded-full w-24 h-24"
+              />
+            </div>
+            <div className="mt-5 space-y-1">
+              <h5>{item.title}</h5>
+              <p>{item.des}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
