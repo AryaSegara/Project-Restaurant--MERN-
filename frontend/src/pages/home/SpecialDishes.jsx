@@ -11,7 +11,7 @@ export default function SpecialDishes() {
 
 
     useEffect(() =>{
-        
+        fetch()
     },[]);
 
   const settings = {
