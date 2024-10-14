@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import { useState } from "react";
 import React from "react";
 import { useEffect } from "react";
+import Cards from "../../components/Cards";
 
 export default function SpecialDishes() {
   const [recipes, setRecipes] = useState([]);
@@ -14,6 +15,9 @@ export default function SpecialDishes() {
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
+        const specials = data.filer((item) => item.category === "popular");
+        // console.log(specials);
+        setRecipes(specials);
       });
   }, []);
 
@@ -60,7 +64,17 @@ export default function SpecialDishes() {
       </div>
 
       <Slider {...settings}>
-        <div>
+        {
+          recipes.map((item,i) =>(
+            <Cards key={i} item={item}/>
+          ))
+        }
+      </Slider>
+    </div>
+  );
+}
+
+{/* <div>
           <h3>1</h3>
         </div>
         <div>
@@ -83,8 +97,4 @@ export default function SpecialDishes() {
         </div>
         <div>
           <h3>8</h3>
-        </div>
-      </Slider>
-    </div>
-  );
-}
+        </div> */}
