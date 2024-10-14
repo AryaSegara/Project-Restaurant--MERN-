@@ -11,7 +11,9 @@ export default function SpecialDishes() {
 
 
     useEffect(() =>{
-        fetch()
+        fetch("/menu.json").then(res => res.json()).then(data =>{
+          console.log(data);
+        })
     },[]);
 
   const settings = {
