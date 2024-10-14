@@ -6,15 +6,16 @@ import React from "react";
 import { useEffect } from "react";
 
 export default function SpecialDishes() {
-    const [recipes,setRecipes] = useState([]);
-    const slider = React.useRef(null);
+  const [recipes, setRecipes] = useState([]);
+  const slider = React.useRef(null);
 
-
-    useEffect(() =>{
-        fetch("/menu.json").then(res => res.json()).then(data =>{
-          console.log(data);
-        })
-    },[]);
+  useEffect(() => {
+    fetch("/menu.json")
+      .then((res) => res.json())
+      .then((data) => {
+        // console.log(data);
+      });
+  }, []);
 
   const settings = {
     dots: true,
@@ -57,7 +58,6 @@ export default function SpecialDishes() {
         <p className="subtitle">Special Dishes</p>
         <h2 className="title md:w-[520px]">Standout Dishes From Our Menu</h2>
       </div>
-
 
       <Slider {...settings}>
         <div>
