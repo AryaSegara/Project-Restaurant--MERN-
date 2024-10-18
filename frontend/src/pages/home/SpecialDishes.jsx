@@ -15,7 +15,7 @@ export default function SpecialDishes() {
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
-        const specials = data.filer((item) => item.category === "popular");
+        const specials = data.filter((item) => item.category === "popular");
         // console.log(specials);
         setRecipes(specials);
       });
