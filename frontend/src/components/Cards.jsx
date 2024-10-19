@@ -1,12 +1,25 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaHeart } from "react-icons/fa";
 
 /* eslint-disable react/prop-types */
 export default function Cards({ item }) {
   const [isHeartFillted, setIsHeartFilled] = useState(false);
+
+  const handleClickHeart = () => {
+    setIsHeartFilled(!isHeartFillted);
+  };
   return (
     <div>
-      <div className="card bg-base-100 w-96 shadow-xl">
+      <div className="card bg-base-100 w-96 shadow-xl relative">
+        <div
+          className={
+            `rating gap-1 absolute right-2 top-2 p-4 heartStar bg-green ${isHeartFillted ? "text-rose-500" : "text-white"}`
+          }
+          onClick={handleClickHeart}
+        >
+          <FaHeart className="h-5 w-5 cursor-pointer" />
+        </div>
         <Link to={"/menu/${item._id}"}>
           <figure>
             <img
