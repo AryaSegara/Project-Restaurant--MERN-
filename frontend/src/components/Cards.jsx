@@ -4,9 +4,7 @@ import { FaHeart } from "react-icons/fa";
 
 /* eslint-disable react/prop-types */
 
-const simpleNextArrow = (props) => {
-  const {className,style, onClick} = props;
-}
+
 export default function Cards({ item }) {
   const [isHeartFillted, setIsHeartFilled] = useState(false);
 

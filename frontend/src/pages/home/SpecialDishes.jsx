@@ -6,6 +6,21 @@ import React from "react";
 import { useEffect } from "react";
 import Cards from "../../components/Cards";
 
+const simpleNextArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "red" }}
+      onClick={onClick}
+    >
+      NEXT
+    </div>
+  );
+};
+
+
+
 export default function SpecialDishes() {
   const [recipes, setRecipes] = useState([]);
   const slider = React.useRef(null);
@@ -64,17 +79,16 @@ export default function SpecialDishes() {
       </div>
 
       <Slider {...settings}>
-        {
-          recipes.map((item,i) =>(
-            <Cards key={i} item={item}/>
-          ))
-        }
+        {recipes.map((item, i) => (
+          <Cards key={i} item={item} />
+        ))}
       </Slider>
     </div>
   );
 }
 
-{/* <div>
+{
+  /* <div>
           <h3>1</h3>
         </div>
         <div>
@@ -97,4 +111,5 @@ export default function SpecialDishes() {
         </div>
         <div>
           <h3>8</h3>
-        </div> */}
+        </div> */
+}
