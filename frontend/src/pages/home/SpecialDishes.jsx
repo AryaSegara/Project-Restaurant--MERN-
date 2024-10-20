@@ -5,6 +5,7 @@ import { useState } from "react";
 import React from "react";
 import { useEffect } from "react";
 import Cards from "../../components/Cards";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 
 const simpleNextArrow = (props) => {
   const { className, style, onClick } = props;
@@ -19,7 +20,18 @@ const simpleNextArrow = (props) => {
   );
 };
 
-
+const simplePrevArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "green" }}
+      onClick={onClick}
+    >
+      BACK
+    </div>
+  );
+};
 
 export default function SpecialDishes() {
   const [recipes, setRecipes] = useState([]);
@@ -69,16 +81,37 @@ export default function SpecialDishes() {
         },
       },
     ],
+
+    nexArrow: <simpleNextArrow />,
+    prevArrow: <simplePrevArrow />,
   };
 
   return (
-    <div className="max-w-screen-2xl container mx-auto lx:px-24 px-8 my-16">
+    <div className="max-w-screen-2xl container mx-auto lx:px-24 px-8 my-16 relative">
       <div className="text-left">
         <p className="subtitle">Special Dishes</p>
         <h2 className="title md:w-[520px]">Standout Dishes From Our Menu</h2>
       </div>
 
-      <Slider {...settings}>
+
+      {/* Arrow btn */}
+      <div className="md:absolute">
+        <button
+          onClick={() => slider?.current?.slickPrev()}
+          className="btn p-2 rounded-full ml-5 hover:bg-green"
+        >
+          <FaAngleLeft className="w-8 h-8 p-1" />
+        </button>
+        <button
+          onClick={() => slider?.current?.slickNext()}
+          className="btn p-2 rounded-full ml-5 hover:bg-green"
+        >
+          <FaAngleRight className="w-8 h-8 p-1" />
+        </button>
+      </div>
+
+
+      <Slider ref={slider} {...settings}>
         {recipes.map((item, i) => (
           <Cards key={i} item={item} />
         ))}
