@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
 
 /* eslint-disable react/prop-types */
+
+const simpleNextArrow = (props) => {
+  const {className,style, onClick} = props;
+}
 export default function Cards({ item }) {
   const [isHeartFillted, setIsHeartFilled] = useState(false);
 
@@ -11,7 +15,7 @@ export default function Cards({ item }) {
   };
   return (
     <div>
-      <div className="card bg-base-100 w-96 shadow-xl relative">
+      <div className="card bg-base-100 w-80 shadow-xl relative">
         <div
           className={
             `rating gap-1 absolute right-2 top-2 p-4 heartStar bg-green ${isHeartFillted ? "text-rose-500" : "text-white"}`
