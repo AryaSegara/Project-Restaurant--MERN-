@@ -95,7 +95,7 @@ export default function SpecialDishes() {
 
 
       {/* Arrow btn */}
-      <div className="md:absolute">
+      <div className="md:absolute right-3 top-8 mb-10 md:mr-24">
         <button
           onClick={() => slider?.current?.slickPrev()}
           className="btn p-2 rounded-full ml-5 hover:bg-green"
@@ -111,7 +111,7 @@ export default function SpecialDishes() {
       </div>
 
 
-      <Slider ref={slider} {...settings}>
+      <Slider ref={slider} {...settings} className="overflow-hidden mt-10 space-x-5">
         {recipes.map((item, i) => (
           <Cards key={i} item={item} />
         ))}
