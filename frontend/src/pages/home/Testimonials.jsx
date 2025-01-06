@@ -6,9 +6,9 @@ export default function Testimonials() {
           <img src="/images/home/testimonials/testimonials.png" alt="" />
         </div>
         <div className="md:w-1/2">
-          <div className="text-center">
-            <p className="subtitle">Customer Favorites</p>
-            <h2 className="title">Popular Categories</h2>
+          <div className="text-left">
+            <p className="subtitle">Testimonials</p>
+            <h2 className="title">What Our Customers Say About Us</h2>
           </div>
         </div>
       </div>
