@@ -9,7 +9,7 @@ export default function Testimonials() {
           <div className="text-left md:w-4/5">
             <p className="subtitle">Testimonials</p>
             <h2 className="title">What Our Customers Say About Us</h2>
-            <blockquote>
+            <blockquote className="">
               I Had the pleasure of dining at Foodi last night, and Im still raving about the experience The attetion to detail in presentation
               and service was impeccable
             </blockquote>
