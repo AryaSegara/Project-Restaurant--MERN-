@@ -11,7 +11,7 @@ export default function Testimonials() {
             <h2 className="title">What Our Customers Say About Us</h2>
             <blockquote className="">
               I Had the pleasure of dining at Foodi last night, and Im still raving about the experience The attetion to detail in presentation
-              and service was impeccable
+              and service was impeccable conqueror
             </blockquote>
           </div>
         </div>
