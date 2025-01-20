@@ -49,7 +49,7 @@ export default function Banner() {
             <div className="md:flex hidden bg-white py-2 px-3 rounded-2xl items-center gap-2 shadow-md w-64">
               <img src="./images/banner-1.png" alt="" className="rounded-2xl" />
               <div className="space-y-1">
-                <h5 className="text-sm mb-1">Spicy noodles</h5>
+                <h5 className="text-sm mb-1">Spicy noodles </h5>
                 <div className="rating rating-sm">
                   <input
                     type="radio"
@@ -95,7 +95,7 @@ export default function Banner() {
             Dive into Delights of Delectable
             <span className="text-green"> Food</span>
             <p className="text-lg text-[#4A4A4A]">
-              Where Each Plate Weaves a story of Culinary Mastery and Passionate
+              Where Each Plate Weaves a story of Culinary Mastery and Passionate 
             </p>
             <button className="btn bg-green px-8 py-3 font-semibold text-white rounded-full">
               Order Now
