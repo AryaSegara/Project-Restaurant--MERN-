@@ -98,7 +98,7 @@ export default function Banner() {
               Where Each Plate Weaves a story of Culinary Mastery and Passionate 
             </p>
             <button className="btn bg-green px-8 py-3 font-semibold text-white rounded-full">
-              Order Now
+              Order Now 
             </button>
           </h2>
         </div>
