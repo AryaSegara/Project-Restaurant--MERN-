@@ -43,6 +43,7 @@ const Navbar = () => {
           </ul>
         </details>
       </li>
+
       <li tabIndex={0}>
         <details>
           <summary>Service</summary>
@@ -59,11 +60,13 @@ const Navbar = () => {
           </ul>
         </details>
       </li>
+
       <li>
         <a>Offers</a>
       </li>
     </>
   );
+  
   return (
     <header className="max-w-screen-2xl container mx-auto fixed top-0 right-0 left-0 transition-all duration-300 ease-in-out">
       <div
