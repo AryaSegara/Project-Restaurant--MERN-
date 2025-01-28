@@ -29,7 +29,7 @@ const simplePrevArrow = (props) => {
       onClick={onClick}
     >
       BACK 
-      
+
     </div>
   );
 };
@@ -93,7 +93,6 @@ export default function SpecialDishes() {
         <p className="subtitle">Special Dishes</p>
         <h2 className="title md:w-[520px]">Standout Dishes From Our Menu</h2>
       </div>
-
 
       {/* Arrow btn */}
       <div className="md:absolute right-3 top-8 mb-10 md:mr-24">
