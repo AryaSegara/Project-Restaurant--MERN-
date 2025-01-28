@@ -28,7 +28,8 @@ const simplePrevArrow = (props) => {
       style={{ ...style, display: "block", background: "green" }}
       onClick={onClick}
     >
-      BACK
+      BACK 
+      
     </div>
   );
 };
