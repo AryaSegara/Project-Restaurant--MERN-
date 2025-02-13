@@ -18,8 +18,6 @@ export default function OurServices() {
           </div>
         </div>
 
-        
-
         {/* images */}
         <div className="md:w-1/2">
           <img src="/images/home/testimonials/testimonials.png" alt="" />
