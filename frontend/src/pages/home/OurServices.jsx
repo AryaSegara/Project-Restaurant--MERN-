@@ -5,7 +5,6 @@ export default function OurServices() {
         {/* Text */}
 
         <div className="md:w-1/2">
-
           <div className="text-lef md:w-4/5">
             <p className="subtitle">Our Story & Services</p>
             <h2 className="title">Our Culinary Journey And Services</h2>
@@ -16,9 +15,7 @@ export default function OurServices() {
             </p>
 
             <button className="btn bg-green text-white px-8 py-3 rounded-full">Explore</button>
-
           </div>
-          
         </div>
 
         
