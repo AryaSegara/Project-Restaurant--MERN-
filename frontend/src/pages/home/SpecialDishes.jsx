@@ -82,7 +82,6 @@ export default function SpecialDishes() {
         },
       },
     ],
-
     nexArrow: <simpleNextArrow />,
     prevArrow: <simplePrevArrow />,
   };
