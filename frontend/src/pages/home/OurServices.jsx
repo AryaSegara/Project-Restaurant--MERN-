@@ -23,6 +23,7 @@ export default function OurServices() {
           <img src="/images/home/testimonials/testimonials.png" alt="" />
         </div>
       </div>
+      
     </div>
   );
 }
