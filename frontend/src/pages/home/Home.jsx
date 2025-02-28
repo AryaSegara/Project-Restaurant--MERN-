@@ -5,7 +5,6 @@ import SpecialDishes from "./SpecialDishes";
 import Testimonials from "./Testimonials";
 
 const Home = () =>{
-    
     return (
         <div>
             <Banner />
