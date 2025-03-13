@@ -2,6 +2,7 @@ export default function Banner() {
   return (
     <div className="max-w-screen-2xl container mx-auto lx:px-24 px-8 bg-gradient-to-r from-[#FAFAFA] from-0% to-[#FCFCFC] to-100%">
       <div className="py-20 flex flex-col md:flex-row-reverse justify-between items-center gap-8">
+        
         {/* Image */}
         <div className="md:w-1/2">
           <img src="./images/bannerHome.png" alt="" />
@@ -46,7 +47,7 @@ export default function Banner() {
                 <p className="text-red">$18.00</p>
               </div>
             </div>
-            
+
             <div className="md:flex hidden bg-white py-2 px-3 rounded-2xl items-center gap-2 shadow-md w-64">
               <img src="./images/banner-1.png" alt="" className="rounded-2xl" />
               <div className="space-y-1">
