@@ -46,6 +46,7 @@ export default function Banner() {
                 <p className="text-red">$18.00</p>
               </div>
             </div>
+            
             <div className="md:flex hidden bg-white py-2 px-3 rounded-2xl items-center gap-2 shadow-md w-64">
               <img src="./images/banner-1.png" alt="" className="rounded-2xl" />
               <div className="space-y-1">
