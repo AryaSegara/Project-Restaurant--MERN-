@@ -24,12 +24,12 @@ export default function Testimonials() {
               </div>
               <div className="avatar">
                 <div className="w-12">
-                  <img src="https://img.daisyui.com/images/profile/demo/spiderperson@192.webp" />
+                  <img src="/images/home/testimonials/testimonial2.png" />
                 </div>
               </div>
               <div className="avatar">
                 <div className="w-12">
-                  <img src="https://img.daisyui.com/images/profile/demo/averagebulk@192.webp" />
+                  <img src="/images/home/testimonials/testimonial3.png" />
                 </div>
               </div>
               <div className="avatar avatar-placeholder">
