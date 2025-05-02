@@ -10,13 +10,37 @@ export default function Testimonials() {
             <p className="subtitle">Testimonials</p>
             <h2 className="title">What Our Customers Say About Us</h2>
             <blockquote className="">
-              I Had the pleasure of dining at Foodi last night, and Im still raving about the experience The attetion to detail in presentation
-              and service was impeccable 
+              I Had the pleasure of dining at Foodi last night, and Im still
+              raving about the experience The attetion to detail in presentation
+              and service was impeccable
             </blockquote>
+
+            {/* avatart with counter grup*/}
+            <div className="avatar-group -space-x-6">
+              <div className="avatar">
+                <div className="w-12">
+                  <img src="/images/home/testimonials/testimonial1.png" />
+                </div>
+              </div>
+              <div className="avatar">
+                <div className="w-12">
+                  <img src="https://img.daisyui.com/images/profile/demo/spiderperson@192.webp" />
+                </div>
+              </div>
+              <div className="avatar">
+                <div className="w-12">
+                  <img src="https://img.daisyui.com/images/profile/demo/averagebulk@192.webp" />
+                </div>
+              </div>
+              <div className="avatar avatar-placeholder">
+                <div className="bg-neutral text-neutral-content w-12">
+                  <span>+99</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    
   );
 }
