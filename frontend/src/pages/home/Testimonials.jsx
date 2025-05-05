@@ -40,9 +40,12 @@ export default function Testimonials() {
                   </div>
                 </div>
               </div>
-            </div>
 
-            
+              <div>
+              <h5>Customer Feedback</h5>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
