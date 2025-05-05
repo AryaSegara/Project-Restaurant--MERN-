@@ -5,6 +5,7 @@ export default function Testimonials() {
         <div className="md:w-1/2">
           <img src="/images/home/testimonials/testimonials.png" alt="" />
         </div>
+        
         <div className="md:w-1/2">
           <div className="text-left md:w-4/5">
             <p className="subtitle">Testimonials</p>
@@ -39,7 +40,7 @@ export default function Testimonials() {
               </div>
             </div>
 
-            
+
           </div>
         </div>
       </div>
