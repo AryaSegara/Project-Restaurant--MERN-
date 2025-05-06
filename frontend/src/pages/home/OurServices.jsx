@@ -1,9 +1,35 @@
+const serviceList = [
+  {
+    id: 1,
+    title: "Catering",
+    des: "Delight your guests with our flavour and presentation",
+    image: "/images/home/services/icon1.png",
+  },
+  {
+    id: 2,
+    title: "Fast Delivery",
+    des: "Delight your guests with our flavour and presentation",
+    image: "/images/home/services/icon1.png",
+  },
+  {
+    id: 3,
+    title: "Catering",
+    des: "Delight your guests with our flavour and presentation",
+    image: "/images/home/services/icon1.png",
+  },
+  {
+    id: 4,
+    title: "Catering",
+    des: "Delight your guests with our flavour and presentation",
+    image: "/images/home/services/icon1.png",
+  },
+];
+
 export default function OurServices() {
   return (
     <div className="max-w-screen-2xl container mx-auto lx:px-24 px-8 my-20">
       <div className="flex flex-col md:flex-row items-center justify-between gap-12">
         {/* Text */}
-
         <div className="md:w-1/2">
           <div className="text-lef md:w-4/5">
             <p className="subtitle">Our Story & Services</p>
@@ -14,7 +40,9 @@ export default function OurServices() {
               hospitality
             </p>
 
-            <button className="btn bg-green text-white px-8 py-3 rounded-full">Explore</button>
+            <button className="btn bg-green text-white px-8 py-3 rounded-full">
+              Explore
+            </button>
           </div>
         </div>
 
@@ -23,7 +51,6 @@ export default function OurServices() {
           <img src="/images/home/testimonials/testimonials.png" alt="" />
         </div>
       </div>
-      
     </div>
   );
 }
