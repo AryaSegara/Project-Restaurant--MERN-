@@ -19,9 +19,9 @@ const serviceList = [
   },
   {
     id: 4,
-    title: "Catering",
-    des: "Delight your guests with our flavour and presentation",
-    image: "/images/home/services/icon1.png",
+    title: "Gift Cards",
+    des: "Give and gift of exceptional dining with Foodi Gift Card",
+    image: "/images/home/services/icon4.png",
   },
 ];
 
