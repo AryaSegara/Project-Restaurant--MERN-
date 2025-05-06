@@ -1,3 +1,5 @@
+import { FaStar } from "react-icons/fa";
+
 export default function Testimonials() {
   return (
     <div className="max-w-screen-2xl container mx-auto lx:px-24 px-8">
@@ -43,6 +45,9 @@ export default function Testimonials() {
 
               <div>
               <h5>Customer Feedback</h5>
+              <div>
+                <FaStar className="text-yellow-400"/>
+              </div>
               </div>
 
             </div>
