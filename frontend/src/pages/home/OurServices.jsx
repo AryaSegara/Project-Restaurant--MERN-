@@ -8,7 +8,7 @@ const serviceList = [
   {
     id: 2,
     title: "Fast Delivery",
-    des: "We deliver your order promptly to your door",
+    des: "We will send your order to your home as soon as possible.",
     image: "/images/home/services/icon2.png",
   },
   {
