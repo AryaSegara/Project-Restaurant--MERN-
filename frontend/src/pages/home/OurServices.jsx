@@ -49,16 +49,16 @@ export default function OurServices() {
         {/* images */}
         <div className="md:w-1/2">
           <div>
-            {
-              serviceList.map((service) => (
-                <div key={service.id}>
-                  <img src={service.image} alt="" className="mx-auto"/>
-                  <h5>{service.title}</h5>
-                  <p>{service.des}</p>
-
-                </div>
-              ))
-            }
+            {serviceList.map((service) => (
+              <div
+                key={service.id}
+                className="shadow-md rounded-sm py-5 px-4 text-center space-y-2 text-green cursor-pointer hover:border-indigo-600 transition-all duration-200"
+              >
+                <img src={service.image} alt="" className="mx-auto" />
+                <h5 className="pt-3 font-semibold">{service.title}</h5>
+                <p className="text-[#90BD95]">{service.des}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
