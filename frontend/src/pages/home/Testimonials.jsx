@@ -47,6 +47,7 @@ export default function Testimonials() {
               <h5>Customer Feedback</h5>
               <div>
                 <FaStar className="text-yellow-400"/>
+                <span>4.9</span>
               </div>
               </div>
 
