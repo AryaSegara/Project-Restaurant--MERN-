@@ -48,7 +48,18 @@ export default function OurServices() {
 
         {/* images */}
         <div className="md:w-1/2">
-          <img src="/images/home/testimonials/testimonials.png" alt="" />
+          <div>
+            {
+              serviceList.map((service) => (
+                <div key={service.id}>
+                  <img src={service.image} alt="" className="mx-auto"/>
+                  <h5>{service.title}</h5>
+                  <p>{service.des}</p>
+
+                </div>
+              ))
+            }
+          </div>
         </div>
       </div>
     </div>
