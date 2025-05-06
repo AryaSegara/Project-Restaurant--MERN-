@@ -8,14 +8,14 @@ const serviceList = [
   {
     id: 2,
     title: "Fast Delivery",
-    des: "Delight your guests with our flavour and presentation",
-    image: "/images/home/services/icon1.png",
+    des: "We deliver your order promptly to your door",
+    image: "/images/home/services/icon2.png",
   },
   {
     id: 3,
-    title: "Catering",
-    des: "Delight your guests with our flavour and presentation",
-    image: "/images/home/services/icon1.png",
+    title: "Online Ordering",
+    des: "Explore menu & order with ease using our Online Ordering",
+    image: "/images/home/services/icon3.png",
   },
   {
     id: 4,
