@@ -3,7 +3,7 @@ export default function Footer() {
     <div>
       <footer className="footer xl:px-10 py-10 px-4 sm:footer-horizontal text-base-content ">
         <aside>
-          <img src="" alt="" />
+          {/* <img src="" alt="" /> */}
           <span className="text-xl text-bold text-green uppercase">
             Ratatouille
           </span>
@@ -76,7 +76,7 @@ export default function Footer() {
           </a>
         </nav>
       </footer>
-      
+
     </div>
   );
 }
