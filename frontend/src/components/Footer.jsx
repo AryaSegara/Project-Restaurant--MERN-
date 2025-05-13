@@ -37,7 +37,6 @@ export default function Footer() {
 
       <footer className="footer sm:footer-horizontal xl:px-10 py-10 px-4 items-center p-4">
         <aside className="grid-flow-col items-center">
-          
 
           <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
         </aside>
@@ -77,7 +76,6 @@ export default function Footer() {
           </a>
         </nav>
       </footer>
-
 
     </div>
   );
