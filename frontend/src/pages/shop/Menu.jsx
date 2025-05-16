@@ -22,6 +22,11 @@ const Menu = () => {
         </div>
 
       </div>
+
+      {/* menu shop section */}
+      <div className="max-w-screen-2xl container mx-auto lx:px-24 px-4"> 
+
+      </div>
     </div>
   );
 };
