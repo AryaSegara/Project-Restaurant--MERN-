@@ -1,4 +1,27 @@
+import { useEffect } from "react";
+import { useState } from "react";
+
 const Menu = () => {
+  const [menu,setMenu] = useState([]);
+  const [filteredItems,setFilteredItems] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [sortOption, setSortOption] = useState("default");
+
+  // loading data
+  useEffect(() =>{
+    // fetch data from the backend
+    const fetchData = async () =>{
+      try{
+        const response = await fetch("/menu.json");
+        const data = await response.json();
+        console.data(data);
+      }catch(error){
+        console.log("Error Fetching Data", error);
+      }
+    }
+
+  },[])
+
   return (
     <div>
       {/* Menu Banner */}
