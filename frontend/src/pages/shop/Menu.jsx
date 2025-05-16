@@ -6,7 +6,7 @@ const Menu = () => {
 
         <div className="py-20 flex flex-col justify-center items-center gap-8">
           {/* Text */}
-          <div className="md:w-1/2 space-y-7 px-4">
+          <div className="space-y-7 px-4">
             <h2 className="md:text-4xl text-3xl font-bold md:leading-snug leading-snug">
               Dive into Delights of Delectable
               <span className="text-green"> Food</span>
