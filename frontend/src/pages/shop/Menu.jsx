@@ -37,6 +37,43 @@ const Menu = () => {
     setSelectedCategory(category);
   };
 
+
+  // show all data function
+  const showAll = () =>{
+    setFilteredItems(menu);
+    setSelectedCategory("all");
+  }
+
+
+  // sorting based on A-Z , Z-A , Low - High pricing
+  const handleSortChange = (option) =>{
+    setSortOption(option);
+
+    let sortedItems = [...filteredItems];
+
+    // logic
+    switch(option){
+      case "A-Z":
+            sortedItems.sort((a,b) => a.name.localCompare(b.name));
+      break;
+      case "A-A":
+            sortedItems.sort((a,b) => b.name.localCompare(a.name));
+      break;
+      case "low-to-high":
+            sortedItems.sort((a,b) => a.price - b.price);
+      break;
+      case "high-to-low":
+            sortedItems.sort((a,b) => a.price - b.price);
+      break;
+
+      default:
+            // code blok
+      break;
+    }
+  }
+
+
+  
   return (
     <div>
       {/* Menu Banner */}
