@@ -2,36 +2,45 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 const Menu = () => {
-  const [menu,setMenu] = useState([]);
-  const [filteredItems,setFilteredItems] = useState([]);
+  const [menu, setMenu] = useState([]);
+  const [filteredItems, setFilteredItems] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [sortOption, setSortOption] = useState("default");
 
   // loading data
-  useEffect(() =>{
+  useEffect(() => {
     // fetch data from the backend
-    const fetchData = async () =>{
-      try{
+    const fetchData = async () => {
+      try {
         const response = await fetch("/menu.json");
         const data = await response.json();
         // console.data(data);
         setMenu(data);
         setFilteredItems(data);
-      }catch(error){
+      } catch (error) {
         console.log("Error Fetching Data", error);
       }
     };
-    
+
     // call the function
     fetchData();
+  }, []);
 
-  },[])
+  // filtering data based on category
+  const filterItems = (category) => {
+    const filtered =
+      category === "all"
+        ? menu
+        : menu.filter((item) => item.category === category);
+
+    setFilteredItems(filtered);
+    setSelectedCategory(category);
+  };
 
   return (
     <div>
       {/* Menu Banner */}
       <div className="max-w-screen-2xl container mx-auto lx:px-24 px-8 bg-gradient-to-r from-[#FAFAFA] from-0% to-[#FCFCFC] to-100%">
-
         <div className="py-20 flex flex-col justify-center items-center gap-8">
           {/* Text */}
           <div className="text-center space-y-7 px-4">
@@ -48,13 +57,10 @@ const Menu = () => {
             </h2>
           </div>
         </div>
-
       </div>
 
       {/* menu shop section */}
-      <div className="max-w-screen-2xl container mx-auto lx:px-24 px-4"> 
-
-      </div>
+      <div className="max-w-screen-2xl container mx-auto lx:px-24 px-4"></div>
     </div>
   );
 };
