@@ -106,7 +106,9 @@ const Menu = () => {
         <div>
           {/* all category btns */}
           <div className="flex flex-row justify-star md:items-center md:gap-8 gap-4 flex-wrap">
-              <button onClick={showAll}>All</button>
+              <button onClick={showAll}
+              className={selectedCategory === "all" ? "active" : ""}
+              >All</button>
               <button onClick={() => filterItems("salad")}>Salad</button>
               <button onClick={() => filterItems("pizza")}>Pizza</button>
               <button onClick={() => filterItems("soup")}>Soups</button>
