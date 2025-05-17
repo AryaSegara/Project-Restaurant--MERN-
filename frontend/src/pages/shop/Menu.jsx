@@ -107,7 +107,7 @@ const Menu = () => {
         {/* product card */}
         <div>
           {
-            
+            filteredItems
           }
         </div>
       </div>
