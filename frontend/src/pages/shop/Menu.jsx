@@ -105,7 +105,7 @@ const Menu = () => {
         {/* filtering adn sorting */}
         <div>
           {/* all category btns */}
-          <div>
+          <div className="flex flex-row justify-star md:items-center md:gap-8 gap-4 flex-wrap">
               <button>All</button>
               <button>Salad</button>
               <button>Pizza</button>
