@@ -81,7 +81,7 @@ const Menu = () => {
     <div>
       {/* Menu Banner */}
       <div className="max-w-screen-2xl container mx-auto lx:px-24 px-8 bg-gradient-to-r from-[#FAFAFA] from-0% to-[#FCFCFC] to-100%">
-        <div className="py-20 flex flex-col justify-center items-center gap-8">
+        <div className="py-36 flex flex-col justify-center items-center gap-8">
           {/* Text */}
           <div className="text-center space-y-7 px-4">
             <h2 className="md:text-4xl text-3xl font-bold md:leading-snug leading-snug">
@@ -105,7 +105,7 @@ const Menu = () => {
         {/* filtering adn sorting */}
         <div>
           {/* all category btns */}
-          <div className="flex flex-row justify-star md:items-center md:gap-8 gap-4 flex-wrap">
+          <div className="flex justify-start md:items-center md:gap-10 gap-4">
               <button onClick={showAll}
               className={selectedCategory === "all" ? "active" : ""}
               >All</button>
@@ -130,10 +130,12 @@ const Menu = () => {
               className={selectedCategory === "driks" ? "active" : ""}  
               >Drinks</button>
           </div>
+
+          
         </div>
 
         {/* product card */}
-        <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-4">
+        <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-24">
           {
             filteredItems.map((item) =>(
                 <Cards key={item.id} item={item}/>
