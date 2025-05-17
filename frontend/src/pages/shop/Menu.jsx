@@ -106,7 +106,12 @@ const Menu = () => {
         <div>
           {/* all category btns */}
           <div>
-              
+              <button>All</button>
+              <button>Salad</button>
+              <button>Pizza</button>
+              <button>Soups</button>
+              <button>Desserts</button>
+              <button>Drinks</button>
           </div>
         </div>
 
