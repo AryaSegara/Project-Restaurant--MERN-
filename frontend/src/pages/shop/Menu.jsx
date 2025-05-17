@@ -70,6 +70,8 @@ const Menu = () => {
             // code blok
       break;
     }
+
+    setFilteredItems(sortedItems);
   }
 
 
