@@ -109,11 +109,26 @@ const Menu = () => {
               <button onClick={showAll}
               className={selectedCategory === "all" ? "active" : ""}
               >All</button>
-              <button onClick={() => filterItems("salad")}>Salad</button>
-              <button onClick={() => filterItems("pizza")}>Pizza</button>
-              <button onClick={() => filterItems("soup")}>Soups</button>
-              <button onClick={() => filterItems("dessert")}>Desserts</button>
-              <button onClick={() => filterItems("drinks")}>Drinks</button>
+
+              <button onClick={() => filterItems("salad")}
+              className={selectedCategory === "salad" ? "active" : ""}
+              >Salad</button>
+
+              <button onClick={() => filterItems("pizza")}
+              className={selectedCategory === "pizza" ? "active" : ""}  
+              >Pizza</button>
+
+              <button onClick={() => filterItems("soup")}
+              className={selectedCategory === "soup" ? "active" : ""}
+              >Soups</button>
+
+              <button onClick={() => filterItems("dessert")}
+              className={selectedCategory === "dessert" ? "active" : ""}  
+              >Desserts</button>
+
+              <button onClick={() => filterItems("drinks")}
+              className={selectedCategory === "driks" ? "active" : ""}  
+              >Drinks</button>
           </div>
         </div>
 
