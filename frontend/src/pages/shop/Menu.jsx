@@ -100,12 +100,12 @@ const Menu = () => {
       </div>
 
       {/* menu shop section */}
-      <div className="max-w-screen-2xl container mx-auto lx:px-24 px-4">
+      <div className="max-w-screen-2xl container mx-auto lx:px-24 px-12">
 
         {/* filtering adn sorting */}
         <div>
           {/* all category btns */}
-          <div className="flex justify-start md:items-center md:gap-10 gap-4">
+          <div className="flex justify-start md:items-center md:gap-10 gap-4 mb-10">
               <button onClick={showAll}
               className={selectedCategory === "all" ? "active" : ""}
               >All</button>

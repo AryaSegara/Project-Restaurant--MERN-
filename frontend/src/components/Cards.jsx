@@ -12,7 +12,7 @@ export default function Cards({ item }) {
   };
   return (
     <div>
-      <div className="card bg-base-100 w-80 shadow-xl relative">
+      <div className="card bg-base-100 w-72 shadow-xl relative">
         <div
           className={`rating gap-1 absolute right-2 top-2 p-4 heartStar bg-green ${
             isHeartFillted ? "text-rose-500" : "text-white"
@@ -26,7 +26,7 @@ export default function Cards({ item }) {
             <img
               src={item.image}
               alt=""
-              className="hover:scale-105 transition-all duration-200 md:h-72"
+              className="hover:scale-105 transition-all duration-200 md:h-60 w-64"
             />
           </figure>
         </Link>
