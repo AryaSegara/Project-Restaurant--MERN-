@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import Cards from "../../components/Cards";
 
 const Menu = () => {
   const [menu, setMenu] = useState([]);
@@ -105,9 +106,11 @@ const Menu = () => {
         <div>Filtering and sorting </div>
 
         {/* product card */}
-        <div>
+        <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-4">
           {
-            filteredItems
+            filteredItems.map((item) =>(
+                <Cards key={item.id} item={item}/>
+            ))
           }
         </div>
       </div>
