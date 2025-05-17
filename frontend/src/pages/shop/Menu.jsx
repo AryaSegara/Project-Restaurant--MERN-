@@ -104,7 +104,12 @@ const Menu = () => {
         {/* filtering adn sorting */}
         <div>Filtering and sorting </div>
 
-        
+        {/* product card */}
+        <div>
+          {
+            
+          }
+        </div>
       </div>
     </div>
   );
