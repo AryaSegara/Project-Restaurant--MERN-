@@ -103,7 +103,12 @@ const Menu = () => {
       <div className="max-w-screen-2xl container mx-auto lx:px-24 px-4">
 
         {/* filtering adn sorting */}
-        <div>Filtering and sorting </div>
+        <div>
+          {/* all category btns */}
+          <div>
+              
+          </div>
+        </div>
 
         {/* product card */}
         <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-4">
