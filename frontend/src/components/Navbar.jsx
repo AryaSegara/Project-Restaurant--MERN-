@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { FaRegUser } from "react-icons/fa";
+import Modal from "./Modal";
 
 const Navbar = () => {
   const [isSticky, setSeticky] = useState(false);
@@ -163,7 +164,7 @@ const Navbar = () => {
             <FaRegUser /> Login
           </button>
 
-          
+          <Modal />
         </div>
       </div>
     </header>
