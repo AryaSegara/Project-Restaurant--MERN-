@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import Cards from "../../components/Cards";
-import {} from "react-icons/fa";
+import { FaFilter } from "react-icons/fa";
 
 const Menu = () => {
   const [menu, setMenu] = useState([]);
@@ -134,9 +134,12 @@ const Menu = () => {
 
           {/* sorting base filtering */}
           <div>
-            <div>
-              
+            <div className="bg-black p-2">
+              <FaFilter className="h-4 w-4 text-white"/>
             </div>
+
+            {/* sorting options */}
+            <select name="" id=""></select>
           </div>
           
         </div>
