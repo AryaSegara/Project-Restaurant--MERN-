@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import Cards from "../../components/Cards";
+import {} from "react-icons/fa";
 
 const Menu = () => {
   const [menu, setMenu] = useState([]);
@@ -131,6 +132,12 @@ const Menu = () => {
               >Drinks</button>
           </div>
 
+          {/* sorting base filtering */}
+          <div>
+            <div>
+              
+            </div>
+          </div>
           
         </div>
 
