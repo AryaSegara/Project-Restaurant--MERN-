@@ -15,11 +15,11 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener("scroll" , handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-    return() => {
-      window.addEventListener("scroll" , handleScroll);
-    }
+    return () => {
+      window.addEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const navItems = (
@@ -66,7 +66,7 @@ const Navbar = () => {
       </li>
     </>
   );
-  
+
   return (
     <header className="max-w-screen-2xl container mx-auto fixed top-0 right-0 left-0 transition-all duration-300 ease-in-out">
       <div
@@ -155,8 +155,11 @@ const Navbar = () => {
             </div>
           </label>
 
-          {/* btn contact */}
-          <button className="btn bg-green rounded-full px-6 text-white flex items-center gap-2">
+          {/* Login btn */}
+          <button
+            onClick={() => document.getElementById("my_modal_5").showModal()}
+            className="btn bg-green rounded-full px-6 text-white flex items-center gap-2"
+          >
             <FaRegUser /> Login
           </button>
         </div>
