@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Modal = () => {
   return (
     <dialog id="my_modal_5" className="modal modal-middle sm:modal-middle">
@@ -27,16 +29,30 @@ const Modal = () => {
                 placeholder="Password"
                 required
               />
-              <label className="label">
+              <label className="label mt-2">
                 <a href="#" className="label-text-alt link link-hover">
                   Forgot password?
                 </a>
               </label>
             </div>
 
+
+            {/* Login btn */}
             <div className="form-control mt-6">
-                <input type="submit" value="login" className="btn bg-green text-white"/>
+              <input
+                type="submit"
+                value="login"
+                className="btn bg-green text-white"
+              />
             </div>
+
+            <p className="text-center my-2">
+              Dont gave an account?{" "}
+              <Link to="/sigup" className="underline text-red ml-1">
+                {" "}
+                Sigup Now
+              </Link>
+            </p>
           </form>
         </div>
       </div>
