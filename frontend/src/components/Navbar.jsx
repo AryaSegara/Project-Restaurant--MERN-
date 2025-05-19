@@ -156,9 +156,9 @@ const Navbar = () => {
           </label>
 
           {/* btn contact */}
-          <a className="btn bg-green rounded-full px-6 text-white flex items-center gap-2">
+          <button className="btn bg-green rounded-full px-6 text-white flex items-center gap-2">
             <BiPhoneCall /> Contact
-          </a>
+          </button>
         </div>
       </div>
     </header>
