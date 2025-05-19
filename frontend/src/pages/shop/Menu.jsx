@@ -188,6 +188,23 @@ const Menu = () => {
           ))}
         </div>
       </div>
+
+
+      {/* pagination section */}
+      <div>
+        {
+          Array.from({length: Math.ceil(filteredItems.length / itemsPerPage)}).map((_, index) => (
+            <button 
+            key={index + 1} 
+            onClick={() => 
+            paginate(index + 1)}
+            >
+              {index + 1}
+
+            </button>
+          ))
+        }
+      </div>
     </div>
   );
 };
