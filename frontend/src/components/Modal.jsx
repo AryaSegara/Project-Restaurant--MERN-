@@ -3,7 +3,7 @@ const Modal = () => {
     <dialog id="my_modal_5" className="modal modal-middle sm:modal-middle">
       <div className="modal-box">
         
-        <div className="modal-action">
+        <div className="modal-action mt-0">
           <div className="card-body" method="dialog">
             <h3 className="font-bold text-lg">Please Login!</h3>
             <fieldset className="fieldset">
@@ -14,7 +14,7 @@ const Modal = () => {
               <div>
                 <a className="link link-hover">Forgot password?</a>
               </div>
-              <button className="btn btn-neutral mt-4">Login</button>
+              <input type="submit" value="login" className="btn btn-neutral mt-4" />
             </fieldset>
           </div>
 
