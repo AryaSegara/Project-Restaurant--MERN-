@@ -58,18 +58,17 @@ const Menu = () => {
     // logic
     switch (option) {
       case "A-Z":
-        sortedItems.sort((a, b) => a.name.localCompare(b.name));
+        sortedItems.sort((a, b) => a.name.localeCompare(b.name));
         break;
-      case "A-A":
-        sortedItems.sort((a, b) => b.name.localCompare(a.name));
+      case "Z-A":
+        sortedItems.sort((a, b) => b.name.localeCompare(a.name));
         break;
       case "low-to-high":
         sortedItems.sort((a, b) => a.price - b.price);
         break;
       case "high-to-low":
-        sortedItems.sort((a, b) => a.price - b.price);
+        sortedItems.sort((a, b) => b.price - a.price);
         break;
-
       default:
         // code blok
         break;
@@ -84,7 +83,7 @@ const Menu = () => {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
 
-  const currentItems = filterItems.slice(indexOfFirstItem, indexOfLastItem);
+  const currentItems = filteredItems.slice(indexOfFirstItem, indexOfLastItem);
   const paginate = (pageNumber) => SetCurrentPage(pageNumber);
 
   return (
@@ -166,7 +165,7 @@ const Menu = () => {
 
             {/* sorting options */}
             <select
-              name="srot"
+              name="sort"
               id="sort"
               onChange={(e) => handleSortChange(e.target.value)}
               value={sortOption}
