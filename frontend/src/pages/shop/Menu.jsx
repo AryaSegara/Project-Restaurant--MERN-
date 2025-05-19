@@ -8,6 +8,8 @@ const Menu = () => {
   const [filteredItems, setFilteredItems] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [sortOption, setSortOption] = useState("default");
+  const [currentPage, SetCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(8);
 
   // loading data
   useEffect(() => {
@@ -37,12 +39,14 @@ const Menu = () => {
 
     setFilteredItems(filtered);
     setSelectedCategory(category);
+    SetCurrentPage(1);
   };
 
   // show all data function
   const showAll = () => {
     setFilteredItems(menu);
     setSelectedCategory("all");
+    SetCurrentPage(1);
   };
 
   // sorting based on A-Z , Z-A , Low - High pricing
@@ -72,6 +76,7 @@ const Menu = () => {
     }
 
     setFilteredItems(sortedItems);
+    SetCurrentPage(1);
   };
 
   return (
