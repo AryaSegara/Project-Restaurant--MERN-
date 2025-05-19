@@ -79,6 +79,14 @@ const Menu = () => {
     SetCurrentPage(1);
   };
 
+
+  // pagination logic
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+
+  const currentItems = filterItems.slice(indexOfFirstItem, indexOfLastItem);
+  const paginate = (pageNumber) => SetCurrentPage(pageNumber);
+
   return (
     <div>
       {/* Menu Banner */}
