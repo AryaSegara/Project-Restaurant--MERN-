@@ -39,45 +39,41 @@ const Menu = () => {
     setSelectedCategory(category);
   };
 
-
   // show all data function
-  const showAll = () =>{
+  const showAll = () => {
     setFilteredItems(menu);
     setSelectedCategory("all");
-  }
-
+  };
 
   // sorting based on A-Z , Z-A , Low - High pricing
-  const handleSortChange = (option) =>{
+  const handleSortChange = (option) => {
     setSortOption(option);
 
     let sortedItems = [...filteredItems];
 
     // logic
-    switch(option){
+    switch (option) {
       case "A-Z":
-            sortedItems.sort((a,b) => a.name.localCompare(b.name));
-      break;
+        sortedItems.sort((a, b) => a.name.localCompare(b.name));
+        break;
       case "A-A":
-            sortedItems.sort((a,b) => b.name.localCompare(a.name));
-      break;
+        sortedItems.sort((a, b) => b.name.localCompare(a.name));
+        break;
       case "low-to-high":
-            sortedItems.sort((a,b) => a.price - b.price);
-      break;
+        sortedItems.sort((a, b) => a.price - b.price);
+        break;
       case "high-to-low":
-            sortedItems.sort((a,b) => a.price - b.price);
-      break;
+        sortedItems.sort((a, b) => a.price - b.price);
+        break;
 
       default:
-            // code blok
-      break;
+        // code blok
+        break;
     }
 
     setFilteredItems(sortedItems);
-  }
+  };
 
-
-  
   return (
     <div>
       {/* Menu Banner */}
@@ -102,55 +98,77 @@ const Menu = () => {
 
       {/* menu shop section */}
       <div className="max-w-screen-2xl container mx-auto lx:px-24 px-12">
-
         {/* filtering adn sorting */}
         <div>
           {/* all category btns */}
           <div className="flex justify-start md:items-center md:gap-10 gap-4 mb-10">
-              <button onClick={showAll}
+            <button
+              onClick={showAll}
               className={selectedCategory === "all" ? "active" : ""}
-              >All</button>
+            >
+              All
+            </button>
 
-              <button onClick={() => filterItems("salad")}
+            <button
+              onClick={() => filterItems("salad")}
               className={selectedCategory === "salad" ? "active" : ""}
-              >Salad</button>
+            >
+              Salad
+            </button>
 
-              <button onClick={() => filterItems("pizza")}
-              className={selectedCategory === "pizza" ? "active" : ""}  
-              >Pizza</button>
+            <button
+              onClick={() => filterItems("pizza")}
+              className={selectedCategory === "pizza" ? "active" : ""}
+            >
+              Pizza
+            </button>
 
-              <button onClick={() => filterItems("soup")}
+            <button
+              onClick={() => filterItems("soup")}
               className={selectedCategory === "soup" ? "active" : ""}
-              >Soups</button>
+            >
+              Soups
+            </button>
 
-              <button onClick={() => filterItems("dessert")}
-              className={selectedCategory === "dessert" ? "active" : ""}  
-              >Desserts</button>
+            <button
+              onClick={() => filterItems("dessert")}
+              className={selectedCategory === "dessert" ? "active" : ""}
+            >
+              Desserts
+            </button>
 
-              <button onClick={() => filterItems("drinks")}
-              className={selectedCategory === "driks" ? "active" : ""}  
-              >Drinks</button>
+            <button
+              onClick={() => filterItems("drinks")}
+              className={selectedCategory === "driks" ? "active" : ""}
+            >
+              Drinks
+            </button>
           </div>
 
           {/* sorting base filtering */}
           <div>
             <div className="bg-black p-2">
-              <FaFilter className="h-4 w-4 text-white"/>
+              <FaFilter className="h-4 w-4 text-white" />
             </div>
 
             {/* sorting options */}
-            <select name="" id=""></select>
+            <select
+              name="srot"
+              id="sort"
+              onChange={(e) => handleSortChange(e.target.value)}
+              value={sortOption}
+              className="bg-black text-white px-2 py-1 rounded-sm"
+            >
+              
+            </select>
           </div>
-          
         </div>
 
         {/* product card */}
         <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-24">
-          {
-            filteredItems.map((item) =>(
-                <Cards key={item.id} item={item}/>
-            ))
-          }
+          {filteredItems.map((item) => (
+            <Cards key={item.id} item={item} />
+          ))}
         </div>
       </div>
     </div>
