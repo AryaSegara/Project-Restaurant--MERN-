@@ -99,7 +99,7 @@ const Menu = () => {
       {/* menu shop section */}
       <div className="max-w-screen-2xl container mx-auto lx:px-24 px-12">
         {/* filtering adn sorting */}
-        <div>
+        <div className="flex flex-col md:flex-row flex-wrap md:justify-between items-center space-y-3 mb-8">
           {/* all category btns */}
           <div className="flex justify-start md:items-center md:gap-10 gap-4 mb-10">
             <button
@@ -146,7 +146,7 @@ const Menu = () => {
           </div>
 
           {/* sorting base filtering */}
-          <div>
+          <div className="flex justify-end mb-4 rounded-sm">
             <div className="bg-black p-2">
               <FaFilter className="h-4 w-4 text-white" />
             </div>
