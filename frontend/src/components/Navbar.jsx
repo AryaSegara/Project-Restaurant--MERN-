@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { BiPhoneCall } from "react-icons/bi";
+import { FaRegUser } from "react-icons/fa";
 
 const Navbar = () => {
   const [isSticky, setSeticky] = useState(false);
@@ -157,7 +157,7 @@ const Navbar = () => {
 
           {/* btn contact */}
           <button className="btn bg-green rounded-full px-6 text-white flex items-center gap-2">
-            <BiPhoneCall /> Contact
+            <FaRegUser /> Login
           </button>
         </div>
       </div>
