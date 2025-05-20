@@ -1,10 +1,11 @@
+import { FaFacebookF, FaGithub, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Modal = () => {
   return (
     <dialog id="my_modal_5" className="modal modal-middle sm:modal-middle">
       <div className="modal-box">
-        <div className="modal-action mt-0">
+        <div className="modal-action flex flex-col justify-center mt-0">
           <form className="card-body" method="dialog">
             <h3 className="font-bold text-lg">Please Login!</h3>
 
@@ -57,23 +58,17 @@ const Modal = () => {
           </form>
 
           {/* Social Sign in */}
-          <div>
-            <button className="btn btn-circle">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
+          <div className="text-center">
+            <button className="btn btn-circle hover:bg-green hover:text-white">
+              <FaGoogle />
             </button>
+            <button className="btn btn-circle hover:bg-green hover:text-white">
+              <FaFacebookF />
+            </button>
+            <button className="btn btn-circle hover:bg-green hover:text-white">
+              <FaGithub />
+            </button>
+            
           </div>
         </div>
       </div>
