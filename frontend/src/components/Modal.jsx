@@ -7,7 +7,7 @@ const Modal = () => {
   const {
     register,
     handleSubmit,
-    formstate : {errors},
+    formState : {errors},
   } = useForm ()
 
   const onSubmit = (data) => console.log(data)
@@ -65,9 +65,9 @@ const Modal = () => {
 
             <p className="text-center my-2">
               Dont gave an account?{" "}
-              <Link to="/sigup" className="underline text-red ml-1">
+              <Link to="/signup" className="underline text-red ml-1">
                 {" "}
-                Sigup Now
+                Signup Now
               </Link>
             </p>
           </form>
