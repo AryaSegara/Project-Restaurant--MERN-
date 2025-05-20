@@ -58,7 +58,7 @@ const Modal = () => {
           </form>
 
           {/* Social Sign in */}
-          <div className="text-center">
+          <div className="text-center space-x-3 mb-5">
             <button className="btn btn-circle hover:bg-green hover:text-white">
               <FaGoogle />
             </button>
