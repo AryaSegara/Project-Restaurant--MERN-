@@ -36,6 +36,8 @@ const Modal = () => {
               </label>
             </div>
 
+            {/* error */}
+
 
             {/* Login btn */}
             <div className="form-control mt-6">
@@ -53,7 +55,10 @@ const Modal = () => {
                 Sigup Now
               </Link>
             </p>
+
           </form>
+
+          
         </div>
       </div>
     </dialog>
