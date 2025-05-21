@@ -165,6 +165,7 @@ const Navbar = () => {
           </button>
 
           <Modal />
+          
         </div>
       </div>
     </header>
