@@ -201,7 +201,6 @@ const Menu = () => {
               ${currentPage === index + 1 ? "bg-green text-white" : "bg-gray-200"}`}
             >
               {index + 1}
-
             </button>
           ))
         }
