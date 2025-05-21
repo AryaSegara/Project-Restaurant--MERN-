@@ -102,12 +102,14 @@ const Navbar = () => {
               {navItems}
             </ul>
           </div>
+
           <a href="/">
             <img src="" alt="" />
             <span className="text-xl text-bold text-green uppercase">
               Ratatouille
             </span>
           </a>
+          
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navItems}</ul>
@@ -165,7 +167,7 @@ const Navbar = () => {
           </button>
 
           <Modal />
-          
+
         </div>
       </div>
     </header>
