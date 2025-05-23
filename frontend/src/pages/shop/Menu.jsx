@@ -55,7 +55,7 @@ const Menu = () => {
 
     let sortedItems = [...filteredItems];
 
-    // logic
+    // logic sorting
     switch (option) {
       case "A-Z":
         sortedItems.sort((a, b) => a.name.localeCompare(b.name));
