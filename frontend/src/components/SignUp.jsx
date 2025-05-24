@@ -46,6 +46,7 @@ const SignUp = () => {
             required
             {...register("password")}
           />
+          
           <label className="label mt-2">
             <a href="#" className="label-text-alt link link-hover">
               Forgot password?
