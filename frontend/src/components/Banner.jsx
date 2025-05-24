@@ -10,6 +10,7 @@ export default function Banner() {
             <div className="flex bg-white py-2 px-3 rounded-2xl items-center gap-2 shadow-md w-64">
               <img src="./images/banner-1.png" alt="" className="rounded-2xl" />
               <div className="space-y-1">
+                
                 <h5 className="text-sm mb-1">Spicy noodles</h5>
                 <div className="rating rating-sm">
                   <input
