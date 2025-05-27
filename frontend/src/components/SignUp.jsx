@@ -56,6 +56,7 @@ const SignUp = () => {
 
         {/* error */}
 
+
         {/* Login btn */}
         <div className="form-control mt-6">
           <input
