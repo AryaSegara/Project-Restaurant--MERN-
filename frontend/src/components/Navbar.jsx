@@ -165,9 +165,7 @@ const Navbar = () => {
           >
             <FaRegUser /> Login
           </button>
-
           <Modal />
-
         </div>
       </div>
     </header>
