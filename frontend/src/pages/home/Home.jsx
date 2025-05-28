@@ -14,7 +14,6 @@ const Home = () =>{
             <OurServices />
         </div>
     )
-
 }
 
 export default Home;
