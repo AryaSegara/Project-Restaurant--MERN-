@@ -76,6 +76,12 @@ const SignUp = () => {
               Login
             </button>
           </p>
+
+          <Link 
+            to="/"
+            className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+              ✕
+            </Link>
         </form>
 
         {/* Social Sign in */}
