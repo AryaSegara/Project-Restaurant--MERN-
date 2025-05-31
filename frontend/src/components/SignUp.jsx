@@ -1,6 +1,7 @@
 import { FaFacebookF, FaGithub, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import Modal from "./Modal";
 
 const SignUp = () => {
   const {
@@ -67,11 +68,13 @@ const SignUp = () => {
           </div>
 
           <p className="text-center my-2">
-            Dont gave an account?{" "}
-            <Link to="/signup" className="underline text-red ml-1">
+            Have an account?{" "}
+            <button to="/signup" className="underline text-red ml-1"
+              onClick={() => document.getElementById("my_modal_5").showModal()}
+            >
               {" "}
-              Signup Now
-            </Link>
+              Login
+            </button>
           </p>
         </form>
 
@@ -88,6 +91,8 @@ const SignUp = () => {
           </button>
         </div>
       </div>
+
+      <Modal />
     </div>
   );
 };
