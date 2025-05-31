@@ -12,7 +12,7 @@ const SignUp = () => {
   const onSubmit = (data) => console.log(data);
 
   return (
-    <div className="max-w-md">
+    <div className="max-w-md bg-white shadow w-full mx-auto flex items-center">
       <div className="modal-action flex flex-col justify-center mt-0">
         <form
           onSubmit={handleSubmit(onSubmit)}
