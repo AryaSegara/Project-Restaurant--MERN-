@@ -3,23 +3,26 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
 const Modal = () => {
-
   const {
     register,
     handleSubmit,
-    formState : {errors},
-  } = useForm ()
+    formState: { errors },
+  } = useForm();
 
-  const onSubmit = (data) => console.log(data)
+  const onSubmit = (data) => console.log(data);
 
   return (
     <dialog id="my_modal_5" className="modal modal-middle sm:modal-middle">
       <div className="modal-box">
         <div className="modal-action flex flex-col justify-center mt-0">
-          <form onSubmit={handleSubmit(onSubmit)} className="card-body" method="dialog">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="card-body"
+            method="dialog"
+          >
             <h3 className="font-bold text-lg">Please Login!</h3>
 
-              {/* email */}
+            {/* email */}
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Email</span>
@@ -70,6 +73,12 @@ const Modal = () => {
                 Signup Now
               </Link>
             </p>
+
+            <button 
+            htmlFor="my_modal_5"
+            className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+              ✕
+            </button>
           </form>
 
           {/* Social Sign in */}
@@ -83,7 +92,6 @@ const Modal = () => {
             <button className="btn btn-circle hover:bg-green hover:text-white">
               <FaGithub />
             </button>
-            
           </div>
         </div>
       </div>
