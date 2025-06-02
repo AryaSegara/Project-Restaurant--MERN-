@@ -1,12 +1,18 @@
 /* eslint-disable react/prop-types */
-import { createContext } from "react";
+import { Children, createContext } from "react";
 
 
 export const AuthContext = createContext();
 
 const AuthProvider = ({children}) =>{
+
+    const authInfo ={
+
+    }
     return(
-        <div>AuthPrivider</div>
+       <AuthContext.Provider value={authInfo}>
+        {Children}
+       </AuthContext.Provider>
     )
 }
 
