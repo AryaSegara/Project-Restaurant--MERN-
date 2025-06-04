@@ -188,7 +188,6 @@ const Menu = () => {
         </div>
       </div>
 
-
       {/* pagination section */}
       <div className="flex justify-center my-8">
         {
