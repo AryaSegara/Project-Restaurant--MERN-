@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
 
 /* eslint-disable react/prop-types */
-
 export default function Cards({ item }) {
   const [isHeartFillted, setIsHeartFilled] = useState(false);
 
@@ -21,6 +20,7 @@ export default function Cards({ item }) {
         >
           <FaHeart className="h-5 w-5 cursor-pointer" />
         </div>
+        
         <Link to={"/menu/${item._id}"}>
           <figure>
             <img
