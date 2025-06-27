@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
-import { Children, createContext, useState } from "react";
+import { Children, createContext, useEffect, useState } from "react";
 import {
   createUserWithEmailAndPassword,
   getAuth,
   GoogleAuthProvider,
+  onAuthStateChanged,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
@@ -47,7 +48,22 @@ const AuthProvider = ({ children }) => {
     });
   };
 
-//   
+  //   Check signed -in user
+  useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+            if (currentUser) {
+                setUser(currentUser);
+                setLoading(false);
+            } else {
+                // User is signed out
+                // ...
+            }
+        });
+
+        return () => {
+            return unsubscribe();
+        }
+  },[]);
 
   const authInfo = {
     user,
