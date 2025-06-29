@@ -1,8 +1,8 @@
 import { FaFacebookF, FaGithub, FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../contexts/AuthProvider";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 const Modal = () => {
   const {
@@ -11,18 +11,34 @@ const Modal = () => {
     formState: { errors },
   } = useForm();
 
-  const {signUpWithGmail} = useContext(AuthContext);
+  const { signUpWithGmail, login } = useContext(AuthContext);
+  const [errorMessage, setErrorMessage] = useState("");
 
+  const location = useLocation();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    const email = data.email;
+    const password = data.password;
+    login(email, password)
+      .then((result) => {
+        const user = result.user;
+        alert("Login success!");
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        setErrorMessage("Provide a correct email and password!");
+      });
+  };
 
   // Google Signin
-  const handleLogin = () =>{
-    signUpWithGmail().then((result) =>{
-      const user = result.user;
-      alert("Login Success!")
-    }).cath((error) => console.log(error));
-  }
+  const handleLogin = () => {
+    signUpWithGmail()
+      .then((result) => {
+        const user = result.user;
+        alert("Login Success!");
+      })
+      .cath((error) => console.log(error));
+  };
 
   return (
     <dialog id="my_modal_5" className="modal modal-middle sm:modal-middle">
@@ -69,6 +85,11 @@ const Modal = () => {
             </div>
 
             {/* error */}
+            {errorMessage ? (
+              <p className="text-red text-xs italic">{errorMessage}</p>
+            ) : (
+              ""
+            )}
 
             {/* Login btn */}
             <div className="form-control mt-6">
@@ -87,17 +108,21 @@ const Modal = () => {
               </Link>
             </p>
 
-            <button 
-            htmlFor="my_modal_5"
-            onClick={() => document.getElementById("my_modal_5").close()}
-            className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+            <button
+              htmlFor="my_modal_5"
+              onClick={() => document.getElementById("my_modal_5").close()}
+              className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+            >
               ✕
             </button>
           </form>
 
           {/* Social Sign in */}
           <div className="text-center space-x-3 mb-4">
-            <button className="btn btn-circle hover:bg-green hover:text-white" onClick={handleLogin}>
+            <button
+              className="btn btn-circle hover:bg-green hover:text-white"
+              onClick={handleLogin}
+            >
               <FaGoogle />
             </button>
             <button className="btn btn-circle hover:bg-green hover:text-white">

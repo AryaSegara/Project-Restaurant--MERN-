@@ -2,6 +2,8 @@ import { FaFacebookF, FaGithub, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Modal from "./Modal";
+import { useContext } from "react";
+import { AuthContext } from "../contexts/AuthProvider";
 
 const SignUp = () => {
   const {
@@ -10,7 +12,24 @@ const SignUp = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const { createUser, login } = useContext(AuthContext);
+
+  const onSubmit = (data) => {
+    const email = data.email;
+    const password = data.password;
+    createUser(email, password)
+      .then((result) => {
+        // sign up
+        const user = result.user;
+        alert("Account creation Success!");
+        // ....
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ...
+      });
+  };
 
   return (
     <div className="max-w-md bg-white shadow w-full mx-auto flex items-center justify-center my-20">
@@ -69,7 +88,9 @@ const SignUp = () => {
 
           <p className="text-center my-2">
             Have an account?{" "}
-            <button to="/signup" className="underline text-red ml-1"
+            <button
+              to="/signup"
+              className="underline text-red ml-1"
               onClick={() => document.getElementById("my_modal_5").showModal()}
             >
               {" "}
@@ -77,11 +98,12 @@ const SignUp = () => {
             </button>
           </p>
 
-          <Link 
+          <Link
             to="/"
-            className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-              ✕
-            </Link>
+            className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+          >
+            ✕
+          </Link>
         </form>
 
         {/* Social Sign in */}
