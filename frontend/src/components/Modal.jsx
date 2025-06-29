@@ -1,5 +1,5 @@
 import { FaFacebookF, FaGithub, FaGoogle } from "react-icons/fa";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../contexts/AuthProvider";
 import { useContext, useState } from "react";
@@ -14,7 +14,11 @@ const Modal = () => {
   const { signUpWithGmail, login } = useContext(AuthContext);
   const [errorMessage, setErrorMessage] = useState("");
 
+  // rendering to home page or specifig page
   const location = useLocation();
+  const navigate = useNavigate();
+  
+  const from = location.state?.from?.pathname || "/";
 
   const onSubmit = (data) => {
     const email = data.email;
@@ -23,6 +27,8 @@ const Modal = () => {
       .then((result) => {
         const user = result.user;
         alert("Login success!");
+        document.getElementById("my_modal_5").close();
+        navigate(from, {replace : true});
       })
       .catch((error) => {
         const errorMessage = error.message;
