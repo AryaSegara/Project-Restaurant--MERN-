@@ -17,7 +17,6 @@ const Modal = () => {
   // rendering to home page or specifig page
   const location = useLocation();
   const navigate = useNavigate();
-  
   const from = location.state?.from?.pathname || "/";
 
   const onSubmit = (data) => {
@@ -42,6 +41,7 @@ const Modal = () => {
       .then((result) => {
         const user = result.user;
         alert("Login Success!");
+        navigate(from, {replace : true});
       })
       .cath((error) => console.log(error));
   };

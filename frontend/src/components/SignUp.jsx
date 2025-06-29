@@ -1,5 +1,5 @@
 import { FaFacebookF, FaGithub, FaGoogle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Modal from "./Modal";
 import { useContext } from "react";
@@ -14,6 +14,11 @@ const SignUp = () => {
 
   const { createUser, login } = useContext(AuthContext);
 
+  // rendering to home page or specifig page
+    const location = useLocation();
+    const navigate = useNavigate();
+    const from = location.state?.from?.pathname || "/";
+
   const onSubmit = (data) => {
     const email = data.email;
     const password = data.password;
@@ -22,6 +27,8 @@ const SignUp = () => {
         // sign up
         const user = result.user;
         alert("Account creation Success!");
+        document.getElementById("my_modal_5").close();
+        navigate(from, {replace : true});
         // ....
       })
       .catch((error) => {
