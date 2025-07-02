@@ -4,6 +4,7 @@ import "../App.css";
 import Footer from "../components/Footer";
 import { useContext } from "react";
 import { AuthContext } from "../contexts/AuthProvider";
+import LoadingSpinner from "../components/LoadingSpinner";
 
 const Main = () => {
   const { loading } = useContext(AuthContext);
@@ -11,7 +12,7 @@ const Main = () => {
   return (
     <div>
       {loading ? (
-        <p>Loading</p>
+        <LoadingSpinner />
       ) : (
         <div>
           <Navbar />
