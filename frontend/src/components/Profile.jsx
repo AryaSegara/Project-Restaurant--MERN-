@@ -1,5 +1,19 @@
+import { useContext } from "react";
+import { AuthContext } from "../contexts/AuthProvider";
+
 /* eslint-disable react/prop-types */
 export default function Profile({ user }) {
+  const { logOut } = useContext(AuthContext);
+  const handleLogout = () => {
+    logOut()
+      .then(() => {
+        // Sign-out successful.
+        alert("Logout Success");
+      })
+      .catch((error) => {
+        // An error happened.
+      });
+  };
   return (
     <div>
       <div className="drawer drawer-end z-50">
@@ -31,7 +45,7 @@ export default function Profile({ user }) {
           <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
             {/* Sidebar content here */}
             <li>
-              <a>Profile</a>
+              <a href="/update-profile">Profile</a>
             </li>
             <li>
               <a>Order</a>
@@ -40,7 +54,7 @@ export default function Profile({ user }) {
               <a>Setting</a>
             </li>
             <li>
-              <a>Logout</a>
+              <a onClick={handleLogout}>Logout</a>
             </li>
           </ul>
         </div>
