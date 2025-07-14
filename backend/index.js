@@ -13,13 +13,10 @@ const port = process.env.PORT || 6001;
 app.use(cors());
 app.use(express.json());
 
-// aryasegara353
-// Ra7yO7qqo4USftzh
-
 // mongodb config
 
 // const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = `mongodb+srv://aryasegara353:Ra7yO7qqo4USftzh@demo-foodie-cluster.3p5vya7.mongodb.net/?retryWrites=true&w=majority&appName=demo-foodie-cluster`;
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@demo-foodie-cluster.3p5vya7.mongodb.net/?retryWrites=true&w=majority&appName=demo-foodie-cluster`;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
@@ -32,9 +29,12 @@ const client = new MongoClient(uri, {
 
 async function run() {
   try {
-    // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
-    // Send a ping to confirm a successful connection
+
+    // database & collections
+    const menuCollections = client.db("demo-foodie-db").collection("menus");
+    const cartCollections = client.db("demo-foodie-db").collection("cartItems");
+
     await client.db("admin").command({ ping: 1 });
     console.log(
       "Pinged your deployment. You successfully connected to MongoDB!"
