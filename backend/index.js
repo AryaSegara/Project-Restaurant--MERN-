@@ -38,6 +38,7 @@ async function run() {
     // all menu item operations
     app.get('/menu', async(req,res) =>{
       const result = await menuCollections.find().toArray();
+      res.send(result);
     })
 
     await client.db("admin").command({ ping: 1 });
